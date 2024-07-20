@@ -15,7 +15,7 @@ import { type Coin } from "@/lib/types";
 import PaginationComponent from "@/components/shared/PaginationComponent";
 import Link from "next/link";
 
-const Page = async ({ searchParams }) => {
+const Page = async ({ searchParams }: any) => {
     const api = new ApiWrapper();
 
     const coinsData = await api.getAllCoins("usd", searchParams.page || 1, 20);

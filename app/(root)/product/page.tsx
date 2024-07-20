@@ -3,7 +3,7 @@ import CoinDescription from "@/components/shared/CoinDescription";
 import { ApiWrapper } from "@/lib/apiWrapper";
 import React from "react";
 
-const Page = async ({ searchParams }) => {
+const Page = async ({ searchParams }: any) => {
     // console.log(searchParams);
     // const coinId = searchParams.id;
     // if (coinId) {
