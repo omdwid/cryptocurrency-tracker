@@ -55,7 +55,6 @@ const Page = async () => {
                 <TableBody>
                     {coins.map((coin: Coin) => {
                         const img_url = coin.coinImage;
-                        // console.log(img_url);
                         return (
                             <TableRow key={coin.coinId} className="">
                                 <TableCell>

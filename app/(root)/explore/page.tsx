@@ -17,8 +17,16 @@ import Link from "next/link";
 
 const Page = async ({ searchParams }: any) => {
     const api = new ApiWrapper();
-
-    const coinsData = await api.getAllCoins("usd", searchParams.page || 1, 20);
+    let coinsData: Coin[] = [];
+    try {
+        coinsData = await api.getAllCoins("usd", searchParams.page || 1, 20);
+    } catch (error: any) {
+        return (
+            <div className="dark:text-primary-100 text-h3 text-black">
+                Unable to show the data: {error.message}
+            </div>
+        );
+    }
 
     return (
         <div className="bg-light-900 dark:bg-dark-500 p-6 rounded-[10px]">
@@ -44,7 +52,6 @@ const Page = async ({ searchParams }: any) => {
                 <TableBody>
                     {coinsData.map((coin: Coin) => {
                         const img_url = coin.coinImage;
-                        console.log(img_url);
                         return (
                             <TableRow key={coin.coinId} className="">
                                 <TableCell className="text-center">

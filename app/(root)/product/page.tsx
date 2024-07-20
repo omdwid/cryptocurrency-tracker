@@ -4,20 +4,21 @@ import { ApiWrapper } from "@/lib/apiWrapper";
 import React from "react";
 
 const Page = async ({ searchParams }: any) => {
-    // console.log(searchParams);
-    // const coinId = searchParams.id;
-    // if (coinId) {
-    //     return (
-    //         <div className="text-h1 dark:text-primary-100 text-black">
-    //             Coin Id not found
-    //         </div>
-    //     );
-    // }
     const coinId = searchParams.id;
 
     const api = new ApiWrapper();
-    const chartData = await api.getCoinChart(coinId, "usd", 7, "daily");
-    const coinData = await api.getCoinData(coinId);
+    let chartData;
+    let coinData;
+    try {
+        chartData = await api.getCoinChart(coinId, "usd", 7, "daily");
+        coinData = await api.getCoinData(coinId);
+    } catch (error: any) {
+        return (
+            <div className="dark:text-primary-100 text-h3 text-black">
+                Unable to show the data: {error.message}
+            </div>
+        );
+    }
 
     console.log(coinData);
     return (

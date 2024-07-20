@@ -19,11 +19,12 @@ const page = async () => {
     const api = new ApiWrapper();
 
     let companyHodings: any[] = [];
-
+    let market_cap_data: any = {};
     try {
         // console.log(coins);
 
         companyHodings = await api.getCompanyHoldings();
+        market_cap_data = await api.getGlobalMarketcapData();
         // console.log(companyHodings);
     } catch (error: any) {
         console.log("Error while fetching");
@@ -34,7 +35,6 @@ const page = async () => {
         );
     }
 
-    const market_cap_data = await api.getGlobalMarketcapData();
     console.log(market_cap_data);
     return (
         <>
