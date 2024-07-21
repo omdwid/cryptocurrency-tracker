@@ -52,7 +52,6 @@ const RightSidebar = () => {
                 <TableBody>
                     {coins.map((coin: Coin) => {
                         const img_url = coin.coinImage;
-                        console.log(img_url);
                         return (
                             <TableRow key={coin.coinId} className="">
                                 <TableCell className="text-center">

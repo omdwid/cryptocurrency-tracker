@@ -28,7 +28,7 @@ export const sidebarLinks = [
         label: "Explore",
     },
     {
-        imgURL: "/assets/icons/trending-up.svg",
+        imgURL: "/assets/icons/currency-dollar-circle.svg",
         route: "/trending",
         label: "Trending",
     },

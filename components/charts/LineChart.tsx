@@ -50,7 +50,6 @@ const getYAxisTicks = (data: any) => {
     const maxPrice = Math.max(...prices);
     const tickCount = 6; // Number of ticks you want
     const tickInterval = (maxPrice - minPrice) / (tickCount - 1);
-    // console.log(minPrice, maxPrice, tickInterval);
 
     return Array.from({ length: tickCount }, (_, i) => {
         const value = minPrice + i * tickInterval;

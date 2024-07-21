@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Theme from "./Theme";
 import GlobalSearch from "./GlobalSearch";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
     return (
@@ -23,6 +24,8 @@ const Navbar = () => {
             <GlobalSearch />
             {/* Theme Switcher */}
             <Theme />
+            {/* Mobile Navbar using hamburger */}
+            <MobileNav />
         </nav>
     );
 };

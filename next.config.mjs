@@ -8,7 +8,9 @@ const nextConfig = {
                 hostname: "assets.coingecko.com",
             },
         ],
+        minimumCacheTTL: 24 * 60 * 60,
     },
+    distDir: "dist",
 };
 
 export default nextConfig;

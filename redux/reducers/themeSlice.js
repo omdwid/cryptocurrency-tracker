@@ -9,16 +9,15 @@ const themeSlice = createSlice({
     initialState,
     reducers: {
         toggleTheme: (state, action) => {
+            console.log(
+                "Toggle theme is called using the payload: ",
+                action.payload
+            );
+
             if (action.payload === "dark") {
                 state.theme = "light";
-                document.documentElement.classList.remove("dark");
-                localStorage.setItem("theme", "light");
-                document.documentElement.classList.add("light");
             } else if (action.payload === "light") {
                 state.theme = "dark";
-                document.documentElement.classList.add("dark");
-                localStorage.setItem("theme", "dark");
-                document.documentElement.classList.remove("light");
             }
         },
     },
