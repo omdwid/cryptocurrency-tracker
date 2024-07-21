@@ -35,7 +35,9 @@ const NavContent = () => {
                                 alt={item.label}
                                 width={20}
                                 height={20}
-                                className={`${isActive ? "" : "invert-colors"}`}
+                                className={`${
+                                    isActive ? "" : "invert dark:invert-0"
+                                }`}
                             />
                             <p
                                 className={`${
@@ -61,7 +63,7 @@ const MobileNav = () => {
                     alt="menu"
                     width={36}
                     height={36}
-                    className="invert-colors sm:hidden"
+                    className="invert dark:invert-0 sm:hidden"
                 />
             </SheetTrigger>
             <SheetContent

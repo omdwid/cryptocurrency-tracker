@@ -22,7 +22,7 @@ const Page = async () => {
     } catch (error: any) {
         return (
             <div className="dark:text-primary-100 text-h3 text-black">
-                Unable to show the data: {error.message}
+                Request Limit Reached! Please refresh after a minute
             </div>
         );
     }

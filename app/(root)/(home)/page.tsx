@@ -24,15 +24,15 @@ const page = async () => {
         companyHodings = await api.getCompanyHoldings();
         market_cap_data = await api.getGlobalMarketcapData();
     } catch (error: any) {
-        console.log("Error while fetching");
         return (
             <div className="dark:text-primary-100 text-h3 text-black">
-                Unable to show the data: {error.message}
+                Request Limit Reached! Please refresh after a minute
             </div>
         );
     }
 
     console.log(market_cap_data);
+
     return (
         <>
             <BarChartComponent

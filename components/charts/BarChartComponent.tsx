@@ -112,7 +112,7 @@ export function BarChartComponent({
                     </BarChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col items-start gap-2 text-h3 font-semibold">
+            <CardFooter className="flex-col items-start gap-2 text-h3 dark:text-primary-100 font-semibold">
                 <div className="flex gap-2 leading-none">
                     Global Market Cap Change (24H):{" "}
                     <p

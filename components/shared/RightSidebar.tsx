@@ -33,19 +33,13 @@ const RightSidebar = () => {
             <h1 className="dark:text-primary-100 text-center text-h3 font-semibold">
                 Watchlist
             </h1>
-            <Table className="mt-3 w-full overflow-x-auto custom-scrollbar text-small dark:text-primary-100">
+            <Table className="mt-3 w-full overflow-x-auto custom-scrollbar text-paragraph dark:text-primary-100">
                 <TableHeader>
                     <TableRow>
                         <TableHead className="">Token</TableHead>
                         <TableHead className="text-center">Symbol</TableHead>
                         <TableHead className="text-center">
                             Last Price
-                        </TableHead>
-                        <TableHead className="text-center">
-                            24H Change
-                        </TableHead>
-                        <TableHead className="text-center">
-                            Market Cap
                         </TableHead>
                     </TableRow>
                 </TableHeader>
@@ -72,12 +66,6 @@ const RightSidebar = () => {
                                 </TableCell>
                                 <TableCell className="text-center">
                                     {coin.coinPrice.toFixed(2)}
-                                </TableCell>
-                                <TableCell className="text-center">
-                                    {coin.coin24hChange.toFixed(2)}
-                                </TableCell>
-                                <TableCell className="text-center">
-                                    {coin.coinMarketCap}
                                 </TableCell>
                             </TableRow>
                         );
