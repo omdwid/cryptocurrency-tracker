@@ -1,5 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Cryptonite is cryptocurrency tracker website that shows visualizations and info the crypto market and trends.
 
+Demo link of the website: [Link](https://cryptonite-nine.vercel.app/)
+
+
+
+# Sample Images
+## Dark Mode
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+## Light Mode
+![alt text](image-3.png)
 ## Getting Started
 
 First, run the development server:
